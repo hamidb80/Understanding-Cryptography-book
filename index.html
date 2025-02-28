@@ -1,0 +1,185 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>network security 📝</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    </head>
+    <body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">network security 📝</a>
+      </div>
+    </nav>
+
+    <script>
+      function toggleNodes(el, opened) {
+        if (el.classList.contains("mind-tree-node")){
+          el.open = opened
+        }
+
+        [...el.querySelectorAll(".mind-tree-node")]
+           .forEach(el => el.open = opened)
+      }
+
+      function clsx(el, classConditionMap) {
+        for (let cls in classConditionMap) {
+          let cond = classConditionMap[cls]
+          if (cond)
+            el.classList.add(cls)
+          else
+            el.classList.remove(cls)
+        }
+      }
+
+      function hideAllContent() {
+        [...document.querySelectorAll(".content")]
+            .forEach(el => el.classList.add("d-none"))
+      }
+
+
+      function toggleSidebar(open) {
+        let el = document.getElementById("contentbar")
+
+        if (!open) {
+          hideAllContent()
+        }
+
+        clsx(document.body, {
+          "overflow-none": open
+        })
+        clsx(el, {
+          "d-none"  :  !open,
+
+          "vh-100"  :  open,
+          "top-0"   :  open,
+        })
+      }
+
+      function contentFor(event, id) {
+        event.preventDefault()
+        let el = document.getElementById("content-" + id)
+        el.classList.remove("d-none")
+        toggleSidebar(true)
+      }
+    </script>
+
+    <div class="container my-4">
+    
+      <div class="my-2">  
+        <button class="btn btn-sm btn-outline-primary" onclick="toggleNodes(document.body, true)">
+          expand all
+        </button>
+
+        <button class="btn btn-sm btn-outline-primary" onclick="toggleNodes(document.body, false)">
+          collapse all
+        </button>
+      </div><details class="mind-tree-node" id="n-31179596">
+        <summary class="mt-1"><span "clickable">Introduction :: Cryptology</span><div class="d-inline-block features"><button class="btn btn-sm btn-light ms-1 px-1" onclick="toggleNodes(this.parentElement.parentElement.parentElement, false)">« </button><button class="btn btn-sm btn-light ms-1 px-1" onclick="toggleNodes(this.parentElement.parentElement.parentElement, true)">» 4</button></div></summary><div class="border-start border-gray my-1 ps-4"><details class="mind-tree-node" id="n-58416178">
+        <summary class="mt-1"><span "clickable">Crypto-graphy  :: hiding </span><div class="d-inline-block features"><button class="btn btn-sm btn-light ms-1 px-1" onclick="toggleNodes(this.parentElement.parentElement.parentElement, false)">« </button><button class="btn btn-sm btn-light ms-1 px-1" onclick="toggleNodes(this.parentElement.parentElement.parentElement, true)">» 3</button><button class="btn btn-sm btn-light ms-1 px-1" onclick="contentFor(event,'n-58416178')">📕 1</button></div></summary><div class="border-start border-gray my-1 ps-4"><details class="mind-tree-node" id="n-3852411">
+        <summary class="mt-1"><span "clickable">Symmetric Cipher</span><div class="d-inline-block features"></div></summary><div class="border-start border-gray my-1 ps-4"></div></details><details class="mind-tree-node" id="n-35916146">
+        <summary class="mt-1"><span "clickable">Asymmetric Cipher</span><div class="d-inline-block features"></div></summary><div class="border-start border-gray my-1 ps-4"></div></details><details class="mind-tree-node" id="n-44174160">
+        <summary class="mt-1"><span "clickable">Protocols</span><div class="d-inline-block features"></div></summary><div class="border-start border-gray my-1 ps-4"></div></details></div></details><details class="mind-tree-node" id="n-24331348">
+        <summary class="mt-1"><span "clickable">Crypt-analysis :: breaking</span><div class="d-inline-block features"><button class="btn btn-sm btn-light ms-1 px-1" onclick="contentFor(event,'n-24331348')">📕 1</button></div></summary><div class="border-start border-gray my-1 ps-4"></div></details><details class="mind-tree-node" id="n-26956246">
+        <summary class="mt-1"><span "clickable">simple Ciphers</span><div class="d-inline-block features"><button class="btn btn-sm btn-light ms-1 px-1" onclick="toggleNodes(this.parentElement.parentElement.parentElement, false)">« </button><button class="btn btn-sm btn-light ms-1 px-1" onclick="toggleNodes(this.parentElement.parentElement.parentElement, true)">» 3</button></div></summary><div class="border-start border-gray my-1 ps-4"><details class="mind-tree-node" id="n-32506685">
+        <summary class="mt-1"><span "clickable">Substitution</span><div class="d-inline-block features"><button class="btn btn-sm btn-light ms-1 px-1" onclick="contentFor(event,'n-32506685')">📕 1</button></div></summary><div class="border-start border-gray my-1 ps-4"></div></details><details class="mind-tree-node" id="n-19612620">
+        <summary class="mt-1"><span "clickable">Shift</span><div class="d-inline-block features"><button class="btn btn-sm btn-light ms-1 px-1" onclick="contentFor(event,'n-19612620')">📕 1</button></div></summary><div class="border-start border-gray my-1 ps-4"></div></details><details class="mind-tree-node" id="n-19439335">
+        <summary class="mt-1"><span "clickable">Affine</span><div class="d-inline-block features"><button class="btn btn-sm btn-light ms-1 px-1" onclick="contentFor(event,'n-19439335')">📕 1</button></div></summary><div class="border-start border-gray my-1 ps-4"></div></details></div></details><details class="mind-tree-node" id="n-37910220">
+        <summary class="mt-1"><span "clickable">Kerckhoffs’ Principle</span><div class="d-inline-block features"><button class="btn btn-sm btn-light ms-1 px-1" onclick="contentFor(event,'n-37910220')">📕 1</button></div></summary><div class="border-start border-gray my-1 ps-4"></div></details></div></details><details class="mind-tree-node" id="n-43667420">
+        <summary class="mt-1"><span "clickable">Stream VS Block Ciphers</span><div class="d-inline-block features"><button class="btn btn-sm btn-light ms-1 px-1" onclick="contentFor(event,'n-43667420')">📕 1</button></div></summary><div class="border-start border-gray my-1 ps-4"></div></details><details class="mind-tree-node" id="n-20949539">
+        <summary class="mt-1"><span "clickable">Stream Ciphers</span><div class="d-inline-block features"><button class="btn btn-sm btn-light ms-1 px-1" onclick="toggleNodes(this.parentElement.parentElement.parentElement, false)">« </button><button class="btn btn-sm btn-light ms-1 px-1" onclick="toggleNodes(this.parentElement.parentElement.parentElement, true)">» 6</button></div></summary><div class="border-start border-gray my-1 ps-4"><details class="mind-tree-node" id="n-5714550">
+        <summary class="mt-1"><span "clickable">Synchronous and Asynchronous</span><div class="d-inline-block features"><button class="btn btn-sm btn-light ms-1 px-1" onclick="contentFor(event,'n-5714550')">📕 1</button></div></summary><div class="border-start border-gray my-1 ps-4"></div></details><details class="mind-tree-node" id="n-54582157">
+        <summary class="mt-1"><span "clickable">random number generator</span><div class="d-inline-block features"><button class="btn btn-sm btn-light ms-1 px-1" onclick="toggleNodes(this.parentElement.parentElement.parentElement, false)">« </button><button class="btn btn-sm btn-light ms-1 px-1" onclick="toggleNodes(this.parentElement.parentElement.parentElement, true)">» 3</button></div></summary><div class="border-start border-gray my-1 ps-4"><details class="mind-tree-node" id="n-14547860">
+        <summary class="mt-1"><span "clickable">true</span><div class="d-inline-block features"><button class="btn btn-sm btn-light ms-1 px-1" onclick="contentFor(event,'n-14547860')">📕 1</button></div></summary><div class="border-start border-gray my-1 ps-4"></div></details><details class="mind-tree-node" id="n-55486152">
+        <summary class="mt-1"><span "clickable">pseudo</span><div class="d-inline-block features"><button class="btn btn-sm btn-light ms-1 px-1" onclick="contentFor(event,'n-55486152')">📕 1</button></div></summary><div class="border-start border-gray my-1 ps-4"></div></details><details class="mind-tree-node" id="n-62346037">
+        <summary class="mt-1"><span "clickable">secure pseudo</span><div class="d-inline-block features"><button class="btn btn-sm btn-light ms-1 px-1" onclick="contentFor(event,'n-62346037')">📕 1</button></div></summary><div class="border-start border-gray my-1 ps-4"></div></details></div></details><details class="mind-tree-node" id="n-30276564">
+        <summary class="mt-1"><span "clickable">One Time Pad</span><div class="d-inline-block features"><button class="btn btn-sm btn-light ms-1 px-1" onclick="contentFor(event,'n-30276564')">📕 1</button></div></summary><div class="border-start border-gray my-1 ps-4"></div></details><details class="mind-tree-node" id="n-52704716">
+        <summary class="mt-1"><span "clickable">Computational Security</span><div class="d-inline-block features"><button class="btn btn-sm btn-light ms-1 px-1" onclick="contentFor(event,'n-52704716')">📕 1</button></div></summary><div class="border-start border-gray my-1 ps-4"></div></details><details class="mind-tree-node" id="n-41631716">
+        <summary class="mt-1"><span "clickable">Linear Feedback Shift Registers</span><div class="d-inline-block features"><button class="btn btn-sm btn-light ms-1 px-1" onclick="toggleNodes(this.parentElement.parentElement.parentElement, false)">« </button><button class="btn btn-sm btn-light ms-1 px-1" onclick="toggleNodes(this.parentElement.parentElement.parentElement, true)">» 3</button></div></summary><div class="border-start border-gray my-1 ps-4"><details class="mind-tree-node" id="n-49836124">
+        <summary class="mt-1"><span "clickable">desc</span><div class="d-inline-block features"><button class="btn btn-sm btn-light ms-1 px-1" onclick="contentFor(event,'n-49836124')">📕 1</button></div></summary><div class="border-start border-gray my-1 ps-4"></div></details><details class="mind-tree-node" id="n-9668505">
+        <summary class="mt-1"><span "clickable">feedback coefficient vector</span><div class="d-inline-block features"><button class="btn btn-sm btn-light ms-1 px-1" onclick="contentFor(event,'n-9668505')">📕 1</button></div></summary><div class="border-start border-gray my-1 ps-4"></div></details><details class="mind-tree-node" id="n-36402019">
+        <summary class="mt-1"><span "clickable">Attack</span><div class="d-inline-block features"><button class="btn btn-sm btn-light ms-1 px-1" onclick="contentFor(event,'n-36402019')">📕 1</button></div></summary><div class="border-start border-gray my-1 ps-4"></div></details></div></details><details class="mind-tree-node" id="n-47379769">
+        <summary class="mt-1"><span "clickable">Trivium</span><div class="d-inline-block features"><button class="btn btn-sm btn-light ms-1 px-1" onclick="toggleNodes(this.parentElement.parentElement.parentElement, false)">« </button><button class="btn btn-sm btn-light ms-1 px-1" onclick="toggleNodes(this.parentElement.parentElement.parentElement, true)">» 2</button></div></summary><div class="border-start border-gray my-1 ps-4"><details class="mind-tree-node" id="n-17056591">
+        <summary class="mt-1"><span "clickable">def</span><div class="d-inline-block features"><button class="btn btn-sm btn-light ms-1 px-1" onclick="contentFor(event,'n-17056591')">📕 2</button></div></summary><div class="border-start border-gray my-1 ps-4"></div></details><details class="mind-tree-node" id="n-32022671">
+        <summary class="mt-1"><span "clickable">phases</span><div class="d-inline-block features"><button class="btn btn-sm btn-light ms-1 px-1" onclick="toggleNodes(this.parentElement.parentElement.parentElement, false)">« </button><button class="btn btn-sm btn-light ms-1 px-1" onclick="toggleNodes(this.parentElement.parentElement.parentElement, true)">» 3</button></div></summary><div class="border-start border-gray my-1 ps-4"><details class="mind-tree-node" id="n-7079708">
+        <summary class="mt-1"><span "clickable">init</span><div class="d-inline-block features"></div></summary><div class="border-start border-gray my-1 ps-4"></div></details><details class="mind-tree-node" id="n-31036410">
+        <summary class="mt-1"><span "clickable">warm up</span><div class="d-inline-block features"></div></summary><div class="border-start border-gray my-1 ps-4"></div></details><details class="mind-tree-node" id="n-45974815">
+        <summary class="mt-1"><span "clickable">Encryption</span><div class="d-inline-block features"></div></summary><div class="border-start border-gray my-1 ps-4"></div></details></div></details></div></details></div></details><details class="mind-tree-node" id="n-59814709">
+        <summary class="mt-1"><span "clickable">DES</span><div class="d-inline-block features"><button class="btn btn-sm btn-light ms-1 px-1" onclick="toggleNodes(this.parentElement.parentElement.parentElement, false)">« </button><button class="btn btn-sm btn-light ms-1 px-1" onclick="toggleNodes(this.parentElement.parentElement.parentElement, true)">» 1</button></div></summary><div class="border-start border-gray my-1 ps-4"><details class="mind-tree-node" id="n-17177528">
+        <summary class="mt-1"><span "clickable">Confusion and Diffusion</span><div class="d-inline-block features"><button class="btn btn-sm btn-light ms-1 px-1" onclick="contentFor(event,'n-17177528')">📕 1</button></div></summary><div class="border-start border-gray my-1 ps-4"></div></details></div></details><details class="mind-tree-node" id="n-50998313">
+        <summary class="mt-1"><span "clickable">AES</span><div class="d-inline-block features"><button class="btn btn-sm btn-light ms-1 px-1" onclick="contentFor(event,'n-50998313')">🌐 1</button></div></summary><div class="border-start border-gray my-1 ps-4"></div></details></div>
+    
+    <div class="pb-5"></div>
+    <div class="pb-5"></div>
+
+    <aside class="w-100 position-fixed d-none bg-light overflow-y-scroll" id="contentbar">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <span> content </span>
+          <button class="btn btn-sm btn-outline-danger" onclick="toggleSidebar(false)"> × </button>
+        </div>
+      </nav>
+      <div class="container py-3"><div id="content-n-14547860" class="content d-none"><div class="card border-danger mb-3"><div class="card-header">📕 <a target="_blank" href="file:///C:/Users/HamidB80/Desktop/sec-net.pdf#page=50">page 50</a><span> from Understanding Cryptography by Christof Paar & Jan Pelzl</span><br/></div><div class="card-body text-dark"><center class="w-100">
+  <img style="max-width: 100%;" src="./50.png"/>
+                                                </center></div>
+  </div></div><div id="content-n-37910220" class="content d-none"><div class="card border-danger mb-3"><div class="card-header">📕 <a target="_blank" href="file:///C:/Users/HamidB80/Desktop/sec-net.pdf#page=27">page 27</a><span> from Understanding Cryptography by Christof Paar & Jan Pelzl</span><br/></div><div class="card-body text-dark"><center class="w-100">
+  <img style="max-width: 100%;" src="./27.png"/>
+                                                </center></div>
+  </div></div><div id="content-n-52704716" class="content d-none"><div class="card border-danger mb-3"><div class="card-header">📕 <a target="_blank" href="file:///C:/Users/HamidB80/Desktop/sec-net.pdf#page=53">page 53</a><span> from Understanding Cryptography by Christof Paar & Jan Pelzl</span><br/></div><div class="card-body text-dark"><center class="w-100">
+  <img style="max-width: 100%;" src="./53.png"/>
+                                                </center></div>
+  </div></div><div id="content-n-58416178" class="content d-none"><div class="card border-danger mb-3"><div class="card-header">📕 <a target="_blank" href="file:///C:/Users/HamidB80/Desktop/sec-net.pdf#page=19">page 19</a><span> from Understanding Cryptography by Christof Paar & Jan Pelzl</span><br/></div><div class="card-body text-dark"><center class="w-100">
+  <img style="max-width: 100%;" src="./19.png"/>
+                                                </center></div>
+  </div></div><div id="content-n-49836124" class="content d-none"><div class="card border-danger mb-3"><div class="card-header">📕 <a target="_blank" href="file:///C:/Users/HamidB80/Desktop/sec-net.pdf#page=58">page 58</a><span> from Understanding Cryptography by Christof Paar & Jan Pelzl</span><br/></div><div class="card-body text-dark"><center class="w-100">
+  <img style="max-width: 100%;" src="./58.png"/>
+                                                </center></div>
+  </div></div><div id="content-n-44174160" class="content d-none"></div><div id="content-n-59814709" class="content d-none"></div><div id="content-n-20949539" class="content d-none"></div><div id="content-n-17177528" class="content d-none"><div class="card border-danger mb-3"><div class="card-header">📕 <a target="_blank" href="file:///C:/Users/HamidB80/Desktop/sec-net.pdf#page=72">page 72</a><span> from Understanding Cryptography by Christof Paar & Jan Pelzl</span><br/></div><div class="card-body text-dark"><center class="w-100">
+  <img style="max-width: 100%;" src="./72.png"/>
+                                                </center></div>
+  </div></div><div id="content-n-43667420" class="content d-none"><div class="card border-danger mb-3"><div class="card-header">📕 <a target="_blank" href="file:///C:/Users/HamidB80/Desktop/sec-net.pdf#page=45">page 45</a><span> from Understanding Cryptography by Christof Paar & Jan Pelzl</span><br/></div><div class="card-body text-dark"><center class="w-100">
+  <img style="max-width: 100%;" src="./45.png"/>
+                                                </center></div>
+  </div></div><div id="content-n-35916146" class="content d-none"></div><div id="content-n-30276564" class="content d-none"><div class="card border-danger mb-3"><div class="card-header">📕 <a target="_blank" href="file:///C:/Users/HamidB80/Desktop/sec-net.pdf#page=52">page 52</a><span> from Understanding Cryptography by Christof Paar & Jan Pelzl</span><br/></div><div class="card-body text-dark"><center class="w-100">
+  <img style="max-width: 100%;" src="./52.png"/>
+                                                </center></div>
+  </div></div><div id="content-n-19612620" class="content d-none"><div class="card border-danger mb-3"><div class="card-header">📕 <a target="_blank" href="file:///C:/Users/HamidB80/Desktop/sec-net.pdf#page=34">page 34</a><span> from Understanding Cryptography by Christof Paar & Jan Pelzl</span><br/></div><div class="card-body text-dark"><center class="w-100">
+  <img style="max-width: 100%;" src="./34.png"/>
+                                                </center></div>
+  </div></div><div id="content-n-36402019" class="content d-none"><div class="card border-danger mb-3"><div class="card-header">📕 <a target="_blank" href="file:///C:/Users/HamidB80/Desktop/sec-net.pdf#page=61">page 61</a><span> from Understanding Cryptography by Christof Paar & Jan Pelzl</span><br/></div><div class="card-body text-dark"><center class="w-100">
+  <img style="max-width: 100%;" src="./61.png"/>
+                                                </center></div>
+  </div></div><div id="content-n-26956246" class="content d-none"></div><div id="content-n-31036410" class="content d-none"></div><div id="content-n-17056591" class="content d-none"><div class="card border-danger mb-3"><div class="card-header">📕 <a target="_blank" href="file:///C:/Users/HamidB80/Desktop/sec-net.pdf#page=61">page 61</a><span> from Understanding Cryptography by Christof Paar & Jan Pelzl</span><br/></div><div class="card-body text-dark"><center class="w-100">
+  <img style="max-width: 100%;" src="./61.png"/>
+                                                </center></div>
+  </div><div class="card border-danger mb-3"><div class="card-header">📕 <a target="_blank" href="file:///C:/Users/HamidB80/Desktop/sec-net.pdf#page=62">page 62</a><span> from Understanding Cryptography by Christof Paar & Jan Pelzl</span><br/></div><div class="card-body text-dark"><center class="w-100">
+  <img style="max-width: 100%;" src="./62.png"/>
+                                                </center></div>
+  </div></div><div id="content-n-19439335" class="content d-none"><div class="card border-danger mb-3"><div class="card-header">📕 <a target="_blank" href="file:///C:/Users/HamidB80/Desktop/sec-net.pdf#page=35">page 35</a><span> from Understanding Cryptography by Christof Paar & Jan Pelzl</span><br/></div><div class="card-body text-dark"><center class="w-100">
+  <img style="max-width: 100%;" src="./35.png"/>
+                                                </center></div>
+  </div></div><div id="content-n-54582157" class="content d-none"></div><div id="content-n-3852411" class="content d-none"></div><div id="content-n-5714550" class="content d-none"><div class="card border-danger mb-3"><div class="card-header">📕 <a target="_blank" href="file:///C:/Users/HamidB80/Desktop/sec-net.pdf#page=45">page 45</a><span> from Understanding Cryptography by Christof Paar & Jan Pelzl</span><br/></div><div class="card-body text-dark"><center class="w-100">
+  <img style="max-width: 100%;" src="./45.png"/>
+                                                </center></div>
+  </div></div><div id="content-n-24331348" class="content d-none"><div class="card border-danger mb-3"><div class="card-header">📕 <a target="_blank" href="file:///C:/Users/HamidB80/Desktop/sec-net.pdf#page=26">page 26</a><span> from Understanding Cryptography by Christof Paar & Jan Pelzl</span><br/></div><div class="card-body text-dark"><center class="w-100">
+  <img style="max-width: 100%;" src="./26.png"/>
+                                                </center></div>
+  </div></div><div id="content-n-47379769" class="content d-none"></div><div id="content-n-7079708" class="content d-none"></div><div id="content-n-9668505" class="content d-none"><div class="card border-danger mb-3"><div class="card-header">📕 <a target="_blank" href="file:///C:/Users/HamidB80/Desktop/sec-net.pdf#page=59">page 59</a><span> from Understanding Cryptography by Christof Paar & Jan Pelzl</span><br/></div><div class="card-body text-dark"><center class="w-100">
+  <img style="max-width: 100%;" src="./59.png"/>
+                                                </center></div>
+  </div></div><div id="content-n-41631716" class="content d-none"></div><div id="content-n-55486152" class="content d-none"><div class="card border-danger mb-3"><div class="card-header">📕 <a target="_blank" href="file:///C:/Users/HamidB80/Desktop/sec-net.pdf#page=50">page 50</a><span> from Understanding Cryptography by Christof Paar & Jan Pelzl</span><br/></div><div class="card-body text-dark"><center class="w-100">
+  <img style="max-width: 100%;" src="./50.png"/>
+                                                </center></div>
+  </div></div><div id="content-n-62346037" class="content d-none"><div class="card border-danger mb-3"><div class="card-header">📕 <a target="_blank" href="file:///C:/Users/HamidB80/Desktop/sec-net.pdf#page=51">page 51</a><span> from Understanding Cryptography by Christof Paar & Jan Pelzl</span><br/></div><div class="card-body text-dark"><center class="w-100">
+  <img style="max-width: 100%;" src="./51.png"/>
+                                                </center></div>
+  </div></div><div id="content-n-50998313" class="content d-none"><div class="card border-primary mb-3"><div class="card-body text-dark"><a target="_blank" href="https://www.youtube.com/watch?v=C4ATDMIz5wc">AES: How to Design Secure Encryption by Spanning Tree</a></div>
+  </div></div><div id="content-n-45974815" class="content d-none"></div><div id="content-n-32022671" class="content d-none"></div><div id="content-n-31179596" class="content d-none"></div><div id="content-n-32506685" class="content d-none"><div class="card border-danger mb-3"><div class="card-header">📕 <a target="_blank" href="file:///C:/Users/HamidB80/Desktop/sec-net.pdf#page=22">page 22</a><span> from Understanding Cryptography by Christof Paar & Jan Pelzl</span><br/></div><div class="card-body text-dark"><center class="w-100">
+  <img style="max-width: 100%;" src="./22.png"/>
+                                                </center></div>
+  </div></div></div></aside>
+ </body>
+ </html>
